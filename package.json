@@ -1,0 +1,19 @@
+{
+  "name": "orbit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "p5.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masaki1223/Orbit.git"
+  },
+  "author": "Masaki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masaki1223/Orbit/issues"
+  },
+  "homepage": "https://github.com/masaki1223/Orbit#readme"
+}
