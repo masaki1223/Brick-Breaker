@@ -1,5 +1,5 @@
 function Paddle(){
-    this.w = 800;
+    this.w = 200;
     this.h = 20;
     this.pos = createVector( width/2 , height-60 );
 

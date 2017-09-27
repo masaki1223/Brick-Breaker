@@ -1,35 +1,38 @@
 var paddle; 
 var ball;
 var balls = [];
+var blocks = [];
 function setup(){
 	createCanvas( windowWidth, windowHeight );	
 	paddle = new Paddle();
 	ball = new Ball(50);
-	//frameRate(20);
+	
+	for(var i = 0; i<0; i++){
+		balls.push(new Block());
+	}
 
-	// for(var i =0; i< 550; i++){
-	// 	balls.push(new Ball(50));
-	// }
+	for(var i = 0; i<15; i++){
+		blocks.push(new Block());
+	}
 }
 
 function draw(){
 	background(0)		
-
 	ball.show();
 	ball.update();
 	ball.checkEdges();
 	ball.meet(paddle);
+
 	paddle.show();
 	paddle.update();
-	paddle.checkEdges();
-	
-	// for(var i =0; i< 550; i++){
-	// 	balls[i].show();
-	// 	balls[i].update();
-	// 	balls[i].checkEdges();
-	// }
-	//console.log(ball.pos);
-	
+	paddle.checkEdges();;
+
+	for(var j = 0; j<15; j++){	
+		if(ball.hits(blocks[j])){
+			blocks.splice(j,1);
+		}
+		blocks[j].display();
+	}
 }
 			
 
