@@ -34,11 +34,8 @@ function Ball(){
     }
     this.hits = function(block){
         var d = dist(this.pos.x, this.pos.y, block.pos.x, block.pos.y);
-        
-        if(d < this.r + block.r ){
+        if( d < this.r + block.r ){
             return true;
-        } else{
-            return false;
         }
     }
 }

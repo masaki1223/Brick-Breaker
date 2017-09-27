@@ -26,12 +26,18 @@ function draw(){
 	paddle.show();
 	paddle.update();
 	paddle.checkEdges();;
-
+	console.log(blocks);
 	for(var j = 0; j<15; j++){	
+
 		if(ball.hits(blocks[j])){
-			blocks.splice(j,1);
+			if(blocks[j].r > 40){
+				blocks[j].r /= 2;
+			} else if(blocks[j].r < 40){
+				blocks.splice(j,1);
+			}
 		}
 		blocks[j].display();
+		
 	}
 }
 			
