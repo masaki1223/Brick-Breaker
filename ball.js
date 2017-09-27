@@ -1,6 +1,6 @@
 function Ball(){
     this.pos = createVector( width/2, height/2);
-    this.dir = createVector(random(1),random(1));
+    this.dir = createVector(random(-1,1),random(-1,1));
     this.vel = createVector(1,1).mult(20);
     this.r = 50;
     this.update = function(){
@@ -9,8 +9,11 @@ function Ball(){
     }
 
     this.show = function(){
-        fill(255);
+        push();
+        fill(255,200,100);
+        noStroke();
         ellipse(this.pos.x, this.pos.y, this.r, this.r);
+        pop();
     }
 
     this.checkEdges = function(){

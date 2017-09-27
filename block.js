@@ -3,6 +3,7 @@ function Block(){
     this.r = random(20, 80);
     this.total = 6;
     this.display = function(){
+
         push();
         fill(255, 255, 255, 200);
         translate(this.pos.x, this.pos.y);
